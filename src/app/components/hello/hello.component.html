@@ -1,0 +1,8 @@
+<div class="container">
+  <p>Hello, {{ name }}</p>
+  <p>Today is {{ today | date }}</p>
+  <p>Tasks for today:</p>
+  <ul class="list">
+    <li *ngFor="let task of tasks" class="list-item">{{ task }}</li>
+  </ul>
+</div>
