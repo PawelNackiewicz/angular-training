@@ -1,0 +1,19 @@
+<form [formGroup]="addCarForm" (ngSubmit)="onSubmit()" class="form">
+  <label for="brand">Brand: </label>
+  <input id="brand" type="text" formControlName="brand" />
+
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="name" />
+
+  <label for="mileage">Mileage: </label>
+  <input id="mileage" type="number" formControlName="mileage" />
+
+  <label for="status">Status:</label>
+  <select id="status" formControlName="status">
+    <option *ngFor="let status of statusOptions" [value]="status.value">
+      {{ status.label }}
+    </option>
+  </select>
+
+  <button type="submit" [disabled]="!addCarForm.valid">Add car</button>
+</form>

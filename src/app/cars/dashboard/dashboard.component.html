@@ -1,0 +1,6 @@
+<ul class="list">
+  <li *ngFor="let car of cars">
+    <app-car-item [carItem]="car" (removeCar)="deleteCar($event)"></app-car-item>
+  </li>
+</ul>
+<app-add-car (addCar)="addNewCar($event)"></app-add-car>

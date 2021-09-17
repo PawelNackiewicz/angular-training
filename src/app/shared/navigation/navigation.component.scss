@@ -1,0 +1,24 @@
+ul {
+    list-style: none;
+    width: 100vw;
+    background-color: #3F61A6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  li {
+    margin: 1rem;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  
+    a:hover {
+      color: #010B40;
+    }
+  }

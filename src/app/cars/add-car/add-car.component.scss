@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  height: 300px;
+  justify-content: space-between;
+  background-color: gainsboro;
+  padding: 1rem;
+  border-radius: 3%;
+
+  button {
+    margin: 0 auto;
+    width: 50%;
+    text-transform: uppercase;
+  }
+}

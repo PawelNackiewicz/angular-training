@@ -1,0 +1,7 @@
+<div *ngIf="carItem" class="item">
+    <p>{{carItem.brand}}</p>
+    <p>{{carItem.name}}</p>
+    <p>{{carItem.mileage}}</p>
+    <p>{{carItem.status}}</p>
+    <button (click)="removeItem(carItem)">delete</button>
+</div>
