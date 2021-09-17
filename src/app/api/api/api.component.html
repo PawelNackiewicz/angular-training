@@ -1,1 +1,13 @@
-<p>api works!</p>
+<div>
+  <button (click)="fetchData()">fetch data</button>
+</div>
+
+<div *ngIf="fetched; else waiting">
+  <h1>Recived:</h1>
+  <p>{{ city }}, {{ country }}</p>
+  <p>{{ temp }}</p>
+</div>
+
+<ng-template #waiting>
+  <div>waiting...</div>
+</ng-template>
