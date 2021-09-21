@@ -8,7 +8,7 @@ import {
   AfterViewInit,
   AfterViewChecked,
   OnDestroy,
-} from '@angular/core';
+} from '@angular/core'
 
 @Component({
   selector: 'app-lifecycle',
@@ -27,34 +27,34 @@ export class LifecycleComponent
     OnDestroy
 {
   constructor() {
-    console.log('constructor');
+    console.log('constructor')
   }
 
   ngOnInit() {
-    console.log('on init');
+    console.log('on init')
   }
   ngOnChanges() {
-    console.log('on changes');
+    console.log('on changes')
   }
   ngDoCheck() {
-    console.log('do check');
+    console.log('do check')
   }
 
   ngAfterContentInit() {
-    console.log('after content init');
+    console.log('after content init')
   }
   ngAfterContentChecked() {
-    console.log('after content checkced');
+    console.log('after content checkced')
   }
   ngAfterViewInit() {
-    console.log('after view init');
+    console.log('after view init')
   }
 
   ngAfterViewChecked() {
-    console.log('after view checked');
+    console.log('after view checked')
   }
 
   ngOnDestroy() {
-    console.log('on destroy');
+    console.log('on destroy')
   }
 }
