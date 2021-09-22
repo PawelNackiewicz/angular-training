@@ -1,6 +1,20 @@
 <ul class="list">
-  <li *ngFor="let car of cars">
-    <app-car-item [carItem]="car" (removeCar)="deleteCar($event)"></app-car-item>
+  <li *ngFor="let car of cars$ | async">
+    <app-car-item
+      [carItem]="car"
+      (removeCar)="deleteCar($event)"
+    ></app-car-item>
   </li>
 </ul>
-<app-add-car (addCar)="addNewCar($event)"></app-add-car>
+<app-add-car></app-add-car>
+<div class="wrapper">
+  <h1>AVAILABLE CARS</h1>
+  <ul class="list">
+    <li *ngFor="let car of avCars$ | async">
+      <app-car-item
+        [carItem]="car"
+        (removeCar)="deleteCar($event)"
+      ></app-car-item>
+    </li>
+  </ul>
+</div>

@@ -8,29 +8,7 @@ export interface ICar {
   status: 'AVAILABLE' | 'RENTED' | 'REPAIRING';
 }
 
-const mockCars: ICar[] = [
-  {
-    id: '1',
-    brand: 'Audi',
-    name: 'A3',
-    mileage: 1000,
-    status: 'AVAILABLE',
-  },
-  {
-    id: '2',
-    brand: 'Audi',
-    name: 'A4',
-    mileage: 2000,
-    status: 'RENTED',
-  },
-  {
-    id: '3',
-    brand: 'Audi',
-    name: 'A5',
-    mileage: 3000,
-    status: 'REPAIRING',
-  },
-];
+const mockCars: ICar[] = [];
 
 @Injectable({
   providedIn: 'root',

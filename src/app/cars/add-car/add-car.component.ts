@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { addCar } from '../+cars/cars.actions'
+import { Store } from '@ngrx/store';
 
 interface SelectOption {
   value: string;
@@ -12,9 +14,7 @@ interface SelectOption {
   styleUrls: ['./add-car.component.scss'],
 })
 export class AddCarComponent implements OnInit {
-  constructor() {}
-
-  @Output() addCar = new EventEmitter();
+  constructor(private store: Store) {}
 
   ngOnInit(): void {}
 
@@ -32,7 +32,10 @@ export class AddCarComponent implements OnInit {
   });
 
   onSubmit() {
-    console.log(this.addCarForm.value);
-    this.addCar.emit(this.addCarForm.value);
+    const newCar = {
+      id: Date.now(),
+      ...this.addCarForm.value
+    }
+    this.store.dispatch(addCar({car: newCar}))
   }
 }
